@@ -24,7 +24,7 @@ RUN \
   && nodenv local ${NODE_VERSION_LTS} \
   && npm install -g grunt \
   && npm install -g mocha \
-  && npm install -g gulp
+  && npm install -g gulp \
   && nodenv install ${NODE_VERSION_CURRENT} \
   && nodenv global ${NODE_VERSION_CURRENT} \
   && npm install -g grunt \
