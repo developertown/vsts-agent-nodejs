@@ -17,6 +17,8 @@ RUN \
   && cd ~/.nodenv && src/configure && make -C src \
   && echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc \
   && echo 'eval "$(nodenv init -)"' >> ~/.bashrc \
+  && chmod 755 /usr/local/vsts-agent/.bashrc \
+  && ln -s /usr/local/vsts-agent/.bashrc /usr/local/vsts-agent/.bash_profile \
   && export PATH="$HOME/.nodenv/bin:$PATH" \
   && eval "$(nodenv init -)" \
   && git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build \
