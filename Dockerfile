@@ -17,8 +17,6 @@ RUN \
   && cd ~/.nodenv && src/configure && make -C src \
   && echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bashrc \
   && echo 'eval "$(nodenv init -)"' >> ~/.bashrc \
-  && chmod 755 /usr/local/vsts-agent/.bashrc \
-  && ln -s /usr/local/vsts-agent/.bashrc /usr/local/vsts-agent/.bash_profile \
   && export PATH="$HOME/.nodenv/bin:$PATH" \
   && eval "$(nodenv init -)" \
   && git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build \
@@ -33,3 +31,4 @@ RUN \
   && npm install -g mocha \
   && npm install -g gulp
 
+ENV PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
