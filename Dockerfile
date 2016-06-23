@@ -31,4 +31,4 @@ RUN \
   && npm install -g mocha \
   && npm install -g gulp
 
-ENV PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/shims/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
