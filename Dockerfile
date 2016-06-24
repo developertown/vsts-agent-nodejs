@@ -2,16 +2,17 @@ FROM developertown/vsts-agent:2.102.0
 
 WORKDIR /usr/local/vsts-agent
 
-ENV NODE_VERSION_LTS=4.4.5
-ENV NODE_VERSION_CURRENT=6.2.2
-
-ENV node=/usr/local/vsts-agent/.nodenv/shims/node
-ENV npm=/usr/local/vsts-agent/.nodenv/shims/npm
-ENV grunt=/usr/local/vsts-agent/.nodenv/shims/grunt
-ENV mocha=/usr/local/vsts-agent/.nodenv/shims/mocha
-ENV gulp=/usr/local/vsts-agent/.nodenv/shims/gulp
+ENV NODE_VERSION_LTS=4.4.5 \
+    NODE_VERSION_CURRENT=6.2.2 \
+    node=/usr/local/vsts-agent/.nodenv/shims/node \
+    npm=/usr/local/vsts-agent/.nodenv/shims/npm \
+    grunt=/usr/local/vsts-agent/.nodenv/shims/grunt \
+    mocha=/usr/local/vsts-agent/.nodenv/shims/mocha \
+    gulp=/usr/local/vsts-agent/.nodenv/shims/gulp \
+    PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 USER vsts
+
 RUN \
      git clone https://github.com/nodenv/nodenv.git ~/.nodenv \
   && cd ~/.nodenv && src/configure && make -C src \
@@ -31,4 +32,3 @@ RUN \
   && npm install -g mocha \
   && npm install -g gulp
 
-ENV PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
