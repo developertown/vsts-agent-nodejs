@@ -1,4 +1,4 @@
-FROM developertown/vsts-agent:2.102.0
+FROM developertown/vsts-agent:2.105.2
 
 WORKDIR /usr/local/vsts-agent
 
@@ -32,3 +32,4 @@ RUN \
   && npm install -g mocha \
   && npm install -g gulp
 
+ENV AGENT_FLAVOR=NodeJS
