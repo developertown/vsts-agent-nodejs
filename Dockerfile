@@ -33,3 +33,6 @@ RUN \
   && npm install -g gulp
 
 ENV AGENT_FLAVOR=NodeJS
+
+# Leave our user as root in the end as it needs to launch supervisord
+USER root
