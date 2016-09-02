@@ -2,8 +2,8 @@ FROM developertown/vsts-agent:2.105.2-6
 
 WORKDIR /usr/local/vsts-agent
 
-ENV NODE_VERSION_LTS=4.4.5 \
-    NODE_VERSION_CURRENT=6.2.2 \
+ENV NODE_VERSION_LTS=4.5.0 \
+    NODE_VERSION_CURRENT=6.5.0 \
     node=/usr/local/vsts-agent/.nodenv/shims/node \
     npm=/usr/local/vsts-agent/.nodenv/shims/npm \
     grunt=/usr/local/vsts-agent/.nodenv/shims/grunt \
