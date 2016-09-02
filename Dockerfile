@@ -1,4 +1,4 @@
-FROM developertown/vsts-agent:2.105.2-6
+FROM developertown/vsts-agent:2.105.2-7
 
 WORKDIR /usr/local/vsts-agent
 
@@ -33,6 +33,3 @@ RUN \
   && npm install -g gulp
 
 ENV AGENT_FLAVOR=NodeJS
-
-# Leave our user as root in the end as it needs to launch supervisord
-USER root
