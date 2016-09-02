@@ -1,4 +1,4 @@
-FROM developertown/vsts-agent:2.105.2-5
+FROM developertown/vsts-agent:2.105.2-6
 
 WORKDIR /usr/local/vsts-agent
 
