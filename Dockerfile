@@ -1,4 +1,4 @@
-FROM developertown/vsts-agent:2.105.2-7
+FROM developertown/vsts-agent:2.105.3-3
 
 WORKDIR /usr/local/vsts-agent
 
@@ -9,7 +9,7 @@ ENV NODE_VERSION_LTS=4.5.0 \
     grunt=/usr/local/vsts-agent/.nodenv/shims/grunt \
     mocha=/usr/local/vsts-agent/.nodenv/shims/mocha \
     gulp=/usr/local/vsts-agent/.nodenv/shims/gulp \
-    PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    PATH=/usr/local/vsts-agent/.nodenv/shims:/usr/local/vsts-agent/.nodenv/bin:$PATH
 
 USER vsts
 
